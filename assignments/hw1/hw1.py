@@ -2,7 +2,7 @@
 Name: Danielle Di Pace
 hw1.py
 
-Problem: Various functions that utilize the user's input to complete calculations
+Problem: Various functions that use the user's input to complete calculations
 and display the calculated results to the user.
 
 Certification of Authenticity:
