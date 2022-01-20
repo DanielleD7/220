@@ -3,7 +3,7 @@ Name: Danielle Di Pace
 hw1.py
 
 Problem: Various functions that utilize the user's input to complete calculations
-and display the calculated result to the user.
+and display the calculated results to the user.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
