@@ -16,7 +16,7 @@ def sum_of_threes():
     three_sum = 0
 
     for i in range(1, (upper_bound // 3) + 1):
-        three_sum += i * 3
+        three_sum = three_sum + (i * 3)
 
     print("Sum of threes is", three_sum)
 
@@ -45,7 +45,7 @@ def sum_squares():
     sum_of_squares = 0
 
     for i in range(lower_range, upper_range + 1):
-        sum_of_squares += (i * i)
+        sum_of_squares = sum_of_squares + (i * i)
 
     print(round(sum_of_squares))
 
@@ -56,7 +56,7 @@ def power():
     answer = base
 
     for _ in range(exponent - 1):
-        answer *= base
+        answer = answer * base
 
     print(base, "^", exponent, "=", answer)
 
