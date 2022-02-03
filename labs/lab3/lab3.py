@@ -29,7 +29,6 @@ def traffic():
 
         total_vehicles += vehicle_count
         print("Road", road, "average vehicles per day:", round(vehicle_count / days_surveyed, 1))
-
     # road for loop END
 
     print("Total number of vehicles traveled on all roads:", total_vehicles)
