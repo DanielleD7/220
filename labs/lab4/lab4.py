@@ -3,7 +3,7 @@ Name: Danielle Di Pace
 lab4.py
 
 Problem: Create a Valentine's Day greeting card of a heart with an animated arrow
-         going through it and a message
+going through it and a message.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
@@ -52,25 +52,25 @@ def greeting_card():
     arrow_base = Polygon(Point(1200, 1060), Point(1210, 1045), Point(850, 810), Point(840, 825))
     arrow_base.setFill("Black")
 
-    # Arrow Point
-    arrow_point = Polygon(Point(870, 785), Point(820, 850), Point(793, 780))
-    arrow_point.setFill("Black")
+    # Arrow Head
+    arrow_head = Polygon(Point(870, 785), Point(820, 850), Point(793, 780))
+    arrow_head.setFill("Black")
 
     # Drawing
     heart_left.draw(win)
     heart_right.draw(win)
     heart_bottom.draw(win)
     arrow_base.draw(win)
-    arrow_point.draw(win)
+    arrow_head.draw(win)
     heart_center.draw(win)
     val_message.draw(win)
 
-    # Animation for loop for the arrow base and head
+    # Animation for the arrow base and head
     for i in range(10):
         arrow_base.move(-70, -70)
-        arrow_point.move(-70, -70)
+        arrow_head.move(-70, -70)
         time.sleep(0.05)
-    # Animation for loop END
+    # Arrow Animation for loop END
 
     # Closing
     time.sleep(0.6)
