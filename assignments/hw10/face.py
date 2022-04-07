@@ -1,4 +1,14 @@
-from graphics import Circle, Line
+"""
+Name: Danielle Di Pace
+face.py
+
+Problem: A face class that allows the creation of a graphics face with methods to change expressions.
+
+Certification of Authenticity:
+I certify that this assignment is entirely my own work.
+"""
+
+from graphics import Circle, Line, Polygon
 
 
 class Face:
@@ -24,10 +34,37 @@ class Face:
         self.mouth.draw(window)
 
     def smile(self):
-        pass
+        mouth_size = 0.8 * self.head.getRadius()
+        mouth_off = self.head.getRadius() / 2.0
+
+        point_left = self.head.getCenter()
+        point_left.move(-mouth_size / 2, mouth_off)
+
+        point_right = self.head.getCenter()
+        point_right.move(mouth_size / 2, mouth_off)
+
+        point_center = self.head.getCenter()
+        point_center.move(0, self.head.getRadius() / 1.3)
+
+        self.mouth.undraw()
+        self.mouth = Polygon(point_left, point_right, point_center)
+        self.mouth.draw(self.window)
 
     def shock(self):
-        pass
+        self.mouth.undraw()
+        self.mouth = Circle(self.head.getCenter(), (0.15 * self.head.getRadius()))
+        self.mouth.move(0, 1.5 * self.head.getRadius() / 3)
+        self.mouth.draw(self.window)
 
     def wink(self):
-        pass
+        point_left = self.left_eye.getCenter()
+        point_left.move(-self.left_eye.getRadius(), 0)
+
+        point_right = self.left_eye.getCenter()
+        point_right.move(self.left_eye.getRadius(), 0)
+
+        self.left_eye.undraw()
+        self.left_eye = Line(point_left, point_right)
+        self.left_eye.draw(self.window)
+
+        self.smile()
