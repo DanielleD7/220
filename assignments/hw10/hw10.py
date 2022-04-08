@@ -77,7 +77,6 @@ def goldbach(number):
             num_1 += 1
         # while loop END
         return number_prime_sum[0]
-
     return None
 
 

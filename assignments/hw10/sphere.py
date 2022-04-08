@@ -2,7 +2,7 @@
 Name: Danielle Di Pace
 sphere.py
 
-Problem: A sphere class that creates a sphere and calculates the surface area and volume.
+Problem: A sphere class that creates a sphere with a radius and calculates the surface area and volume.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.

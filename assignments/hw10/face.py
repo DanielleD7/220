@@ -39,10 +39,8 @@ class Face:
 
         point_left = self.head.getCenter()
         point_left.move(-mouth_size / 2, mouth_off)
-
         point_right = self.head.getCenter()
         point_right.move(mouth_size / 2, mouth_off)
-
         point_center = self.head.getCenter()
         point_center.move(0, self.head.getRadius() / 1.3)
 
@@ -59,7 +57,6 @@ class Face:
     def wink(self):
         point_left = self.left_eye.getCenter()
         point_left.move(-self.left_eye.getRadius(), 0)
-
         point_right = self.left_eye.getCenter()
         point_right.move(self.left_eye.getRadius(), 0)
 
